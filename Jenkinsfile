@@ -2,14 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Deploy') {
-            when {
-              expression {
-                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
-              }
-            }
+        stage ('Print') {
             steps {
-                sh 'make publish'
+                echo "Hello Devops Engineers"
             }
         }
     }
